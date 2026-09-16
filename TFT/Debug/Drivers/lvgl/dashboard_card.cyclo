@@ -1,0 +1,2 @@
+../Drivers/lvgl/dashboard_card.c:6:18:dashboard_card_create	2
+../Drivers/lvgl/dashboard_card.c:65:6:dashboard_card_set_value	1
