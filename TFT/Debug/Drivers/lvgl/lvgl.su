@@ -1,2 +1,0 @@
-../Drivers/lvgl/lvgl.c:17:6:my_flush_cb	24	static
-../Drivers/lvgl/lvgl.c:27:6:Display1_INIT	16	static

@@ -1,2 +1,0 @@
-../Drivers/lvgl/src/core/../misc/lv_style.h:604:20:lv_style_set_pad_all	16	static
-../Drivers/lvgl/dashboard_styles.c:12:6:dashboard_styles_init	40	static
