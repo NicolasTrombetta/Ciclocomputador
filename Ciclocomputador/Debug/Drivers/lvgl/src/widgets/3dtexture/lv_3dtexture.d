@@ -1,0 +1,12 @@
+Drivers/lvgl/src/widgets/3dtexture/lv_3dtexture.o: \
+ ../Drivers/lvgl/src/widgets/3dtexture/lv_3dtexture.c \
+ ../Drivers/lvgl/src/widgets/3dtexture/lv_3dtexture_private.h \
+ ../Drivers/lvgl/src/widgets/3dtexture/lv_3dtexture.h \
+ ../Drivers/lvgl/src/widgets/3dtexture/../../lv_conf_internal.h \
+ ../Drivers/lvgl/src/widgets/3dtexture/../../lv_conf_kconfig.h \
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/TFT/Drivers/lvgl/lv_conf.h
+../Drivers/lvgl/src/widgets/3dtexture/lv_3dtexture_private.h:
+../Drivers/lvgl/src/widgets/3dtexture/lv_3dtexture.h:
+../Drivers/lvgl/src/widgets/3dtexture/../../lv_conf_internal.h:
+../Drivers/lvgl/src/widgets/3dtexture/../../lv_conf_kconfig.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/TFT/Drivers/lvgl/lv_conf.h:

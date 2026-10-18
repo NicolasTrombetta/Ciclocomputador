@@ -1,0 +1,21 @@
+{
+  "files": [
+    "actions.h",
+    "fonts.h",
+    "images.c",
+    "images.h",
+    "screens.c",
+    "screens.h",
+    "structs.h",
+    "styles.c",
+    "styles.h",
+    "ui.c",
+    "ui.h",
+    "ui_font_roboto24.c",
+    "ui_font_roboto28.c",
+    "ui_font_roboto40.c",
+    "ui_image_bateria.c",
+    "ui_image_satelite.c",
+    "vars.h"
+  ]
+}

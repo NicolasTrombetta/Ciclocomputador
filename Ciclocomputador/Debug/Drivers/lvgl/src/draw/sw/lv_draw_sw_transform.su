@@ -1,0 +1,3 @@
+../Drivers/lvgl/src/draw/sw/lv_draw_sw_transform.c:1083:13:transform_point_upscaled	20	static
+../Drivers/lvgl/src/draw/sw/lv_draw_sw_transform.c:656:13:transform_rgb565a8	80	static
+../Drivers/lvgl/src/draw/sw/lv_draw_sw_transform.c:108:6:lv_draw_sw_transform	248	static

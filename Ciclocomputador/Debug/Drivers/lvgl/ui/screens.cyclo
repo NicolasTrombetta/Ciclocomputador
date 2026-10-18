@@ -1,0 +1,7 @@
+../Drivers/lvgl/ui/screens.c:572:6:tick_screen_dashboard_screen	1
+../Drivers/lvgl/ui/screens.c:730:6:tick_screen_settings_screen	1
+../Drivers/lvgl/ui/screens.c:25:6:create_screen_dashboard_screen	1
+../Drivers/lvgl/ui/screens.c:575:6:create_screen_settings_screen	1
+../Drivers/lvgl/ui/screens.c:738:6:tick_screen	2
+../Drivers/lvgl/ui/screens.c:743:6:tick_screen_by_id	1
+../Drivers/lvgl/ui/screens.c:830:6:create_screens	1

@@ -1,0 +1,2 @@
+../Drivers/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.c:251:28:lv_draw_sw_blend_color_to_rgb565_swapped	19
+../Drivers/lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.c:402:28:lv_draw_sw_blend_image_to_rgb565_swapped	49
