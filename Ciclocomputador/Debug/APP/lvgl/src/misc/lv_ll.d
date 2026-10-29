@@ -1,0 +1,17 @@
+APP/lvgl/src/misc/lv_ll.o: ../APP/lvgl/src/misc/lv_ll.c \
+ ../APP/lvgl/src/misc/lv_ll.h ../APP/lvgl/src/misc/../lv_conf_internal.h \
+ ../APP/lvgl/src/misc/../lv_conf_kconfig.h \
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lv_conf.h \
+ ../APP/lvgl/src/misc/lv_types.h ../APP/lvgl/src/misc/../stdlib/lv_mem.h \
+ ../APP/lvgl/src/misc/../stdlib/../lv_conf_internal.h \
+ ../APP/lvgl/src/misc/../stdlib/lv_string.h \
+ ../APP/lvgl/src/misc/../stdlib/../misc/lv_types.h
+../APP/lvgl/src/misc/lv_ll.h:
+../APP/lvgl/src/misc/../lv_conf_internal.h:
+../APP/lvgl/src/misc/../lv_conf_kconfig.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lv_conf.h:
+../APP/lvgl/src/misc/lv_types.h:
+../APP/lvgl/src/misc/../stdlib/lv_mem.h:
+../APP/lvgl/src/misc/../stdlib/../lv_conf_internal.h:
+../APP/lvgl/src/misc/../stdlib/lv_string.h:
+../APP/lvgl/src/misc/../stdlib/../misc/lv_types.h:

@@ -1,0 +1,3 @@
+../APP/FIT/fit_crc.c:22:12:FitCRC_Get16	1
+../APP/FIT/fit_crc.c:44:12:FitCRC_Update16	2
+../APP/FIT/fit_crc.c:58:12:FitCRC_Calc16	1

@@ -1,0 +1,10 @@
+APP/lvgl/src/draw/nxp/pxp/lv_draw_buf_pxp.o: \
+ ../APP/lvgl/src/draw/nxp/pxp/lv_draw_buf_pxp.c \
+ ../APP/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h \
+ ../APP/lvgl/src/draw/nxp/pxp/../../../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/nxp/pxp/../../../lv_conf_kconfig.h \
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lv_conf.h
+../APP/lvgl/src/draw/nxp/pxp/lv_draw_pxp.h:
+../APP/lvgl/src/draw/nxp/pxp/../../../lv_conf_internal.h:
+../APP/lvgl/src/draw/nxp/pxp/../../../lv_conf_kconfig.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lv_conf.h:

@@ -1,0 +1,12 @@
+APP/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o: \
+ ../APP/lvgl/src/draw/vg_lite/lv_vg_lite_pending.c \
+ ../APP/lvgl/src/draw/vg_lite/lv_vg_lite_pending.h \
+ ../APP/lvgl/src/draw/vg_lite/../../misc/lv_types.h \
+ ../APP/lvgl/src/draw/vg_lite/../../misc/../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/vg_lite/../../misc/../lv_conf_kconfig.h \
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lv_conf.h
+../APP/lvgl/src/draw/vg_lite/lv_vg_lite_pending.h:
+../APP/lvgl/src/draw/vg_lite/../../misc/lv_types.h:
+../APP/lvgl/src/draw/vg_lite/../../misc/../lv_conf_internal.h:
+../APP/lvgl/src/draw/vg_lite/../../misc/../lv_conf_kconfig.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lv_conf.h:

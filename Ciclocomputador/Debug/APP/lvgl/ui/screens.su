@@ -1,0 +1,7 @@
+../APP/lvgl/ui/screens.c:572:6:tick_screen_dashboard_screen	0	static
+../APP/lvgl/ui/screens.c:730:6:tick_screen_settings_screen	0	static
+../APP/lvgl/ui/screens.c:25:6:create_screen_dashboard_screen	248	static
+../APP/lvgl/ui/screens.c:575:6:create_screen_settings_screen	48	static
+../APP/lvgl/ui/screens.c:738:6:tick_screen	0	static
+../APP/lvgl/ui/screens.c:743:6:tick_screen_by_id	0	static
+../APP/lvgl/ui/screens.c:830:6:create_screens	24	static

@@ -1,5 +1,0 @@
-../Drivers/lvgl/GUI.c:9:6:dashboard_create	1
-../Drivers/lvgl/GUI.c:15:6:float2string	1
-../Drivers/lvgl/GUI.c:23:6:dashboard_update	1
-../Drivers/lvgl/GUI.c:27:6:update_queue	4
-../Drivers/lvgl/GUI.c:85:6:vTaskLVGL	1

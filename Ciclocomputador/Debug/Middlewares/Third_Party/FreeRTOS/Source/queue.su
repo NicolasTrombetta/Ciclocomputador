@@ -1,5 +1,6 @@
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2291:19:prvIsQueueEmpty	8	static
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2074:19:prvCopyDataToQueue	16	static
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2882:20:prvNotifyQueueSetContainer	24	static,ignoring_inline_asm
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2153:13:prvCopyDataFromQueue	4	static
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2171:13:prvUnlockQueue	16	static
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:255:12:xQueueGenericReset	16	static,ignoring_inline_asm
@@ -34,3 +35,8 @@
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2705:7:vQueueUnregisterQueue	8	static
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:1975:6:vQueueDelete	8	static,ignoring_inline_asm
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2737:7:vQueueWaitForMessageRestricted	16	static
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2773:19:xQueueCreateSet	0	static
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2787:13:xQueueAddToSet	16	static
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2820:13:xQueueRemoveFromSet	16	static
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2856:25:xQueueSelectFromSet	16	static
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c:2869:25:xQueueSelectFromSetFromISR	16	static

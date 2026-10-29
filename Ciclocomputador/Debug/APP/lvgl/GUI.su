@@ -1,0 +1,5 @@
+../APP/lvgl/GUI.c:9:6:dashboard_create	8	static
+../APP/lvgl/GUI.c:15:6:float2string	16	static
+../APP/lvgl/GUI.c:23:6:dashboard_update	8	static
+../APP/lvgl/GUI.c:27:6:update_queue	72	static
+../APP/lvgl/GUI.c:80:6:vTaskLVGL	8	static

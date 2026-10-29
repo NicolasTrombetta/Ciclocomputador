@@ -1,0 +1,11 @@
+../APP/FIT/fit.c:108:11:Fit_GetArch	1
+../APP/FIT/fit.c:134:21:Fit_GetMesgDef	3
+../APP/FIT/fit.c:148:21:Fit_GetMesgDefFromEnum	2
+../APP/FIT/fit.c:159:12:Fit_GetMesgDefSize	2
+../APP/FIT/fit.c:168:12:Fit_GetMesgSize	3
+../APP/FIT/fit.c:189:12:Fit_GetMesgSizeFromEnum	3
+../APP/FIT/fit.c:209:10:Fit_InitMesg	5
+../APP/FIT/fit.c:239:12:Fit_GetFieldOffset	4
+../APP/FIT/fit.c:259:15:Fit_GetFieldDef	4
+../APP/FIT/fit.c:288:11:Fit_LookupMessage	13
+../APP/FIT/fit.c:407:12:Fit_GetFileMesgOffset	4

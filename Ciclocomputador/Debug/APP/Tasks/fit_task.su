@@ -1,0 +1,6 @@
+../APP/Tasks/fit_task.c:76:6:init_task_fit	24	static
+../APP/Tasks/fit_task.c:96:9:crearArchivo	80	static
+../APP/Tasks/fit_task.c:163:6:escribirRecord	120	static
+../APP/Tasks/fit_task.c:184:6:cerrarArchivo	24	static
+../APP/Tasks/fit_task.c:196:6:escribirEventoTimer	40	static
+../APP/Tasks/fit_task.c:28:6:task_fit	48	static

@@ -1,0 +1,6 @@
+../APP/FIT/encode_fit.c:18:9:WriteFileHeader	32	static
+../APP/FIT/encode_fit.c:82:9:WriteData	32	static
+../APP/FIT/encode_fit.c:42:6:WriteMessageDefinition	24	static
+../APP/FIT/encode_fit.c:49:6:WriteMessageDefinitionWithDevFields	40	static
+../APP/FIT/encode_fit.c:71:6:WriteMessage	24	static
+../APP/FIT/encode_fit.c:77:6:WriteDeveloperField	0	static
