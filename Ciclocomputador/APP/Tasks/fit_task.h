@@ -14,12 +14,6 @@
 #include "FreeRTOS.h"
 #include "queue.h"
 
-typedef enum {
-    EVENTO_BOTON_START,
-    EVENTO_BOTON_PAUSE,
-    EVENTO_BOTON_STOP,
-    EVENTO_BOTON_CONFIG
-} EventoPulsador_t;
 
 typedef struct{
 	uint32_t distance;
@@ -30,8 +24,20 @@ typedef struct{
 	int32_t position_long;
 }DatoProcesamiento_t;
 
+typedef enum{
+	EV_REC_STARTED,
+	EV_PAUSED,
+	EV_RESUMED,
+	EV_SAVING,
+	EV_SAVED,
+	EV_SAVE_ERROR,
+	EV_SD_ERROR,
+	EV_NONE
+}Evento_sd_t;
+
 extern QueueHandle_t Queue_evento_sd;
 extern QueueHandle_t Queue_dato_sd;
+extern QueueHandle_t Queue_sd_eventos;
 extern QueueSetHandle_t Queue_set_sd;
 
 void escribirEventoTimer(FIT_EVENT_TYPE tipo, FIT_DATE_TIME ts);

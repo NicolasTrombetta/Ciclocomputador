@@ -121,7 +121,38 @@ APP/lvgl/src/widgets/chart/lv_chart.o: \
  ../APP/lvgl/src/widgets/chart/../../core/lv_group.h \
  ../APP/lvgl/src/widgets/chart/lv_chart.h \
  ../APP/lvgl/src/widgets/chart/../../lv_conf_internal.h \
- ../APP/lvgl/src/widgets/chart/../../core/lv_obj.h
+ ../APP/lvgl/src/widgets/chart/../../core/lv_obj.h \
+ ../APP/lvgl/src/widgets/chart/../../misc/lv_area_private.h \
+ ../APP/lvgl/src/widgets/chart/../../misc/lv_area.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/lv_draw_private.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/lv_draw.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../osal/lv_os_private.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../osal/../lv_conf_internal.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../osal/lv_os.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../osal/../misc/lv_types.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../osal/lv_os_none.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/lv_cache.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/../lv_types.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/lv_cache_entry.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_class.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_lru_rb.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/../lv_cache_private.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/../../lv_types.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/../../../osal/lv_os_private.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_lru_ll.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_sc_da.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/lv_cache_instance.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/lv_image_header_cache.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/../../lv_types.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/lv_image_cache.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/lv_draw_vector_private.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/lv_draw_vector.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/lv_array.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/../misc/lv_matrix.h \
+ ../APP/lvgl/src/widgets/chart/../../draw/lv_draw_image.h \
+ ../APP/lvgl/src/widgets/chart/../../core/lv_obj_class_private.h \
+ ../APP/lvgl/src/widgets/chart/../../core/lv_obj_draw_private.h \
+ ../APP/lvgl/src/widgets/chart/../../misc/lv_assert.h
 ../APP/lvgl/src/widgets/chart/lv_chart_private.h:
 ../APP/lvgl/src/widgets/chart/../../core/lv_obj_private.h:
 ../APP/lvgl/src/widgets/chart/../../core/../misc/lv_ext_data.h:
@@ -244,3 +275,34 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../APP/lvgl/src/widgets/chart/lv_chart.h:
 ../APP/lvgl/src/widgets/chart/../../lv_conf_internal.h:
 ../APP/lvgl/src/widgets/chart/../../core/lv_obj.h:
+../APP/lvgl/src/widgets/chart/../../misc/lv_area_private.h:
+../APP/lvgl/src/widgets/chart/../../misc/lv_area.h:
+../APP/lvgl/src/widgets/chart/../../draw/lv_draw_private.h:
+../APP/lvgl/src/widgets/chart/../../draw/lv_draw.h:
+../APP/lvgl/src/widgets/chart/../../draw/../osal/lv_os_private.h:
+../APP/lvgl/src/widgets/chart/../../draw/../osal/../lv_conf_internal.h:
+../APP/lvgl/src/widgets/chart/../../draw/../osal/lv_os.h:
+../APP/lvgl/src/widgets/chart/../../draw/../osal/../misc/lv_types.h:
+../APP/lvgl/src/widgets/chart/../../draw/../osal/lv_os_none.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/lv_cache.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/../lv_types.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/lv_cache_entry.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_class.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_lru_rb.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/../lv_cache_private.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/../../lv_types.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/../../../osal/lv_os_private.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_lru_ll.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/class/lv_cache_sc_da.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/lv_cache_instance.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/lv_image_header_cache.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/../../lv_types.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/cache/instance/lv_image_cache.h:
+../APP/lvgl/src/widgets/chart/../../draw/lv_draw_vector_private.h:
+../APP/lvgl/src/widgets/chart/../../draw/lv_draw_vector.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/lv_array.h:
+../APP/lvgl/src/widgets/chart/../../draw/../misc/lv_matrix.h:
+../APP/lvgl/src/widgets/chart/../../draw/lv_draw_image.h:
+../APP/lvgl/src/widgets/chart/../../core/lv_obj_class_private.h:
+../APP/lvgl/src/widgets/chart/../../core/lv_obj_draw_private.h:
+../APP/lvgl/src/widgets/chart/../../misc/lv_assert.h:

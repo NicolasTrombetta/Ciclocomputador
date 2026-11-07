@@ -617,6 +617,7 @@ APP/lvgl/src/drivers/nuttx/lv_nuttx_libuv.o: \
  ../APP/lvgl/src/drivers/nuttx/../../../src/misc/lv_anim_timeline.h \
  ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/msgbox/lv_msgbox_private.h \
  ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/msgbox/lv_msgbox.h \
+ ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/msgbox/../../core/lv_obj_private.h \
  ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/buttonmatrix/lv_buttonmatrix_private.h \
  ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/buttonmatrix/../../core/lv_obj_private.h \
  ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h \
@@ -1323,6 +1324,7 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../APP/lvgl/src/drivers/nuttx/../../../src/misc/lv_anim_timeline.h:
 ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/msgbox/lv_msgbox_private.h:
 ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/msgbox/lv_msgbox.h:
+../APP/lvgl/src/drivers/nuttx/../../../src/widgets/msgbox/../../core/lv_obj_private.h:
 ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/buttonmatrix/lv_buttonmatrix_private.h:
 ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/buttonmatrix/../../core/lv_obj_private.h:
 ../APP/lvgl/src/drivers/nuttx/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h:

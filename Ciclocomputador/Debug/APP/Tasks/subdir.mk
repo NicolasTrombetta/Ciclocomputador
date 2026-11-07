@@ -6,15 +6,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../APP/Tasks/fit_task.c \
-../APP/Tasks/sd_task.c 
+../APP/Tasks/task_pulsador.c 
 
 OBJS += \
 ./APP/Tasks/fit_task.o \
-./APP/Tasks/sd_task.o 
+./APP/Tasks/task_pulsador.o 
 
 C_DEPS += \
 ./APP/Tasks/fit_task.d \
-./APP/Tasks/sd_task.d 
+./APP/Tasks/task_pulsador.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -24,7 +24,7 @@ APP/Tasks/%.o APP/Tasks/%.su APP/Tasks/%.cyclo: ../APP/Tasks/%.c APP/Tasks/subdi
 clean: clean-APP-2f-Tasks
 
 clean-APP-2f-Tasks:
-	-$(RM) ./APP/Tasks/fit_task.cyclo ./APP/Tasks/fit_task.d ./APP/Tasks/fit_task.o ./APP/Tasks/fit_task.su ./APP/Tasks/sd_task.cyclo ./APP/Tasks/sd_task.d ./APP/Tasks/sd_task.o ./APP/Tasks/sd_task.su
+	-$(RM) ./APP/Tasks/fit_task.cyclo ./APP/Tasks/fit_task.d ./APP/Tasks/fit_task.o ./APP/Tasks/fit_task.su ./APP/Tasks/task_pulsador.cyclo ./APP/Tasks/task_pulsador.d ./APP/Tasks/task_pulsador.o ./APP/Tasks/task_pulsador.su
 
 .PHONY: clean-APP-2f-Tasks
 

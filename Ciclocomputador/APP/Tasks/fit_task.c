@@ -7,6 +7,7 @@
 
 #include "fit_task.h"
 #include "encode_fit.h"
+#include "task_pulsador.h"
 #include <string.h>
 
 typedef enum {
@@ -18,6 +19,7 @@ typedef enum {
 
 QueueHandle_t Queue_evento_sd;
 QueueHandle_t Queue_dato_sd;
+QueueHandle_t Queue_sd_eventos;
 QueueSetHandle_t Queue_set_sd;
 
 static uint32_t blocks;
@@ -25,11 +27,17 @@ FIT_DATE_TIME timestamp=0;
 FIL f;
 extern FIT_UINT16 data_crc;
 
+static void publicar_evento_sd(Evento_sd_t evento)
+{
+	if (Queue_sd_eventos != NULL)
+		xQueueSend(Queue_sd_eventos, &evento, 0);
+}
+
 void task_fit(void *p){
 	Estado_sd_t estado=ESPERANDO;
 
 	DatoProcesamiento_t datoRecibido;
-	EventoPulsador_t eventoRecibido;
+	uint8_t eventoRecibido;
 	QueueSetMemberHandle_t miembroActivado;
 
 
@@ -45,25 +53,34 @@ void task_fit(void *p){
 				xQueueReceive(Queue_evento_sd, &eventoRecibido, 0);
 
 				if(estado==GRABANDO){
-					if(eventoRecibido==EVENTO_BOTON_PAUSE){
+					if(eventoRecibido==EV_BTN_MENU_SHORT){
 						escribirEventoTimer(FIT_EVENT_TYPE_STOP_ALL, timestamp);
 						estado=PAUSADO;
-					}else if(eventoRecibido==EVENTO_BOTON_STOP){
+						publicar_evento_sd(EV_PAUSED);
+					}else if(eventoRecibido==EV_BTN_MENU_LONG){
+						publicar_evento_sd(EV_SAVING);
 						cerrarArchivo();
 						estado=ESPERANDO;
+						publicar_evento_sd(EV_SAVED);
 					}
 				}else if(estado==PAUSADO){
-					if(eventoRecibido==EVENTO_BOTON_START){
+					if(eventoRecibido==EV_BTN_MENU_SHORT){
 						escribirEventoTimer(FIT_EVENT_TYPE_START, timestamp);
 						estado=GRABANDO;
-					}else if(eventoRecibido==EVENTO_BOTON_STOP){
+						publicar_evento_sd(EV_RESUMED);
+					}else if(eventoRecibido==EV_BTN_MENU_LONG){
+						publicar_evento_sd(EV_SAVING);
 						cerrarArchivo();
 						estado=ESPERANDO;
+						publicar_evento_sd(EV_SAVED);
 					}
 				}else if(estado==ESPERANDO){
-					if(eventoRecibido==EVENTO_BOTON_START){
+					if(eventoRecibido==EV_BTN_MENU_SHORT){
 						if(crearArchivo("Prueba_2.fit")==FR_OK){
 							estado=GRABANDO;
+							publicar_evento_sd(EV_REC_STARTED);
+						}else{
+							publicar_evento_sd(EV_SD_ERROR);
 						}
 					}
 				}
@@ -75,7 +92,8 @@ void task_fit(void *p){
 
 void init_task_fit(){
 	 Queue_dato_sd= xQueueCreate(10,sizeof(DatoProcesamiento_t));
-	 Queue_evento_sd=xQueueCreate(5,sizeof(EventoPulsador_t));
+	 Queue_evento_sd=xQueueCreate(5,sizeof(uint8_t));
+	 Queue_sd_eventos=xQueueCreate(10,sizeof(Evento_sd_t));
 
 	 Queue_set_sd = xQueueCreateSet(15);
 
@@ -178,19 +196,18 @@ void escribirRecord(DatoProcesamiento_t *dato){
 	blocks++;
 }
 
-volatile FRESULT dbg_res[6];
-volatile DWORD   dbg_size;
+
 
 void cerrarArchivo(){
 	 	 UINT bw;
-	    dbg_size = f_size(&f);                      // tamaño ANTES de cerrar
+	    //f_size(&f);
 
 	    f_lseek(&f, f_size(&f));
-	    dbg_res[0] = f_write(&f, &data_crc, sizeof(FIT_UINT16), &bw);
-	    dbg_res[1] = WriteFileHeader(&f);
-	    dbg_res[2] = f_sync(&f);
-	    dbg_res[3] = f_close(&f);
-	    dbg_res[4] = f_mount(NULL, USERPath, 0);
+	    f_write(&f, &data_crc, sizeof(FIT_UINT16), &bw);
+	    WriteFileHeader(&f);
+	    f_sync(&f);
+	    f_close(&f);
+	    f_mount(NULL, USERPath, 0);
 }
 
 void escribirEventoTimer(FIT_EVENT_TYPE tipo, FIT_DATE_TIME ts){

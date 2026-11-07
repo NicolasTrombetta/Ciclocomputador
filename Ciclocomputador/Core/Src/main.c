@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "fatfs.h"
 #include "i2c.h"
 #include "spi.h"
 #include "usart.h"
@@ -32,6 +33,7 @@
 #include "fit_task.h"
 #include "fatfs.h"
 #include "math.h"
+#include "task_pulsador.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -75,11 +77,8 @@ void TaskUpdateDashboard(void* p){
 	float tiempo=0;
 	Dashboard_data_t datos;
 	DatoProcesamiento_t datos_sd;
-	EventoPulsador_t evento =EVENTO_BOTON_START;
 
 	char tiempo_str[9]="00:00:00";
-
-	xQueueSend(Queue_evento_sd,&evento,portMAX_DELAY);
 
 	while(1){
 		tiempo+=0.2;
@@ -100,16 +99,10 @@ void TaskUpdateDashboard(void* p){
 		datos_sd.position_lat=LAT0_SC + (FIT_SINT32)(50.0 * sin(tiempo * 0.05) * SC_PER_M);;
 		datos_sd.position_long=LON0_SC +((FIT_SINT32)(tiempo * SC_PER_M));
 
-		dashboard_update(datos);
+		update_data_display(datos);
 		xQueueSend(Queue_dato_sd,&datos_sd,100);
 
-		if(tiempo>=0.2*2000){
-			evento=EVENTO_BOTON_STOP;
- 			xQueueSend(Queue_evento_sd,&evento,portMAX_DELAY);
-		}
-
-
-		vTaskDelay(5);
+		vTaskDelay(pdMS_TO_TICKS(1000));
 	}
 }
 
@@ -149,13 +142,14 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   MX_SPI3_Init();
-  MX_USART1_Init();
+  MX_USART1_UART_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
   Queue_dashboard = xQueueCreate(1, sizeof(Dashboard_data_t));
 
   init_task_fit();
+  init_task_pulsador();
 
 
   xTaskCreate(
@@ -167,7 +161,7 @@ int main(void)
   	          NULL
   	      );
 
-  xTaskCreate(
+  	  xTaskCreate(
   	          vTaskLVGL,
   	          "LVGL_Task",
   	          2048,
@@ -175,7 +169,6 @@ int main(void)
   	          tskIDLE_PRIORITY + 2,
   	          &lvgl_task_handle
   	      );
-
 
   /* USER CODE END 2 */
 

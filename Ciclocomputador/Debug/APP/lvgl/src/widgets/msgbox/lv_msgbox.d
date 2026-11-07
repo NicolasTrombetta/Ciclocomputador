@@ -121,7 +121,30 @@ APP/lvgl/src/widgets/msgbox/lv_msgbox.o: \
  ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj_private.h \
  ../APP/lvgl/src/widgets/msgbox/../../core/../misc/lv_ext_data.h \
  ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj.h \
- ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj_class_private.h
+ ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj_class_private.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/lv_label.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../lv_conf_internal.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../misc/lv_types.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../core/lv_obj.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../font/lv_font.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../font/lv_symbol_def.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../misc/lv_text.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../draw/lv_draw.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../core/lv_observer.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../core/../misc/lv_ext_data.h \
+ ../APP/lvgl/src/widgets/msgbox/../label/../../core/lv_obj.h \
+ ../APP/lvgl/src/widgets/msgbox/../image/lv_image.h \
+ ../APP/lvgl/src/widgets/msgbox/../image/../../lv_conf_internal.h \
+ ../APP/lvgl/src/widgets/msgbox/../image/../../core/lv_obj.h \
+ ../APP/lvgl/src/widgets/msgbox/../image/../../misc/lv_fs.h \
+ ../APP/lvgl/src/widgets/msgbox/../image/../../draw/lv_draw.h \
+ ../APP/lvgl/src/widgets/msgbox/../image/../../core/lv_observer.h \
+ ../APP/lvgl/src/widgets/msgbox/../../misc/lv_assert.h \
+ ../APP/lvgl/src/widgets/msgbox/../../misc/lv_text_private.h \
+ ../APP/lvgl/src/widgets/msgbox/../../misc/lv_text.h \
+ ../APP/lvgl/src/widgets/msgbox/../../display/lv_display.h \
+ ../APP/lvgl/src/widgets/msgbox/../../layouts/flex/lv_flex.h \
+ ../APP/lvgl/src/widgets/msgbox/../../stdlib/lv_string.h
 ../APP/lvgl/src/widgets/msgbox/lv_msgbox_private.h:
 ../APP/lvgl/src/widgets/msgbox/lv_msgbox.h:
 ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj.h:
@@ -244,3 +267,26 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../APP/lvgl/src/widgets/msgbox/../../core/../misc/lv_ext_data.h:
 ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj.h:
 ../APP/lvgl/src/widgets/msgbox/../../core/lv_obj_class_private.h:
+../APP/lvgl/src/widgets/msgbox/../label/lv_label.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../lv_conf_internal.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../misc/lv_types.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../core/lv_obj.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../font/lv_font.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../font/lv_symbol_def.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../misc/lv_text.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../draw/lv_draw.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../core/lv_observer.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../core/../misc/lv_ext_data.h:
+../APP/lvgl/src/widgets/msgbox/../label/../../core/lv_obj.h:
+../APP/lvgl/src/widgets/msgbox/../image/lv_image.h:
+../APP/lvgl/src/widgets/msgbox/../image/../../lv_conf_internal.h:
+../APP/lvgl/src/widgets/msgbox/../image/../../core/lv_obj.h:
+../APP/lvgl/src/widgets/msgbox/../image/../../misc/lv_fs.h:
+../APP/lvgl/src/widgets/msgbox/../image/../../draw/lv_draw.h:
+../APP/lvgl/src/widgets/msgbox/../image/../../core/lv_observer.h:
+../APP/lvgl/src/widgets/msgbox/../../misc/lv_assert.h:
+../APP/lvgl/src/widgets/msgbox/../../misc/lv_text_private.h:
+../APP/lvgl/src/widgets/msgbox/../../misc/lv_text.h:
+../APP/lvgl/src/widgets/msgbox/../../display/lv_display.h:
+../APP/lvgl/src/widgets/msgbox/../../layouts/flex/lv_flex.h:
+../APP/lvgl/src/widgets/msgbox/../../stdlib/lv_string.h:

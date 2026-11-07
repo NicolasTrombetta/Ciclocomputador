@@ -71,6 +71,15 @@ void Error_Handler(void);
 #define USART_RX_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define Pulsador_next_Pin GPIO_PIN_6
+#define Pulsador_next_GPIO_Port GPIOA
+#define Pulsador_next_EXTI_IRQn EXTI9_5_IRQn
+#define Pulsador_menu_Pin GPIO_PIN_7
+#define Pulsador_menu_GPIO_Port GPIOA
+#define Pulsador_menu_EXTI_IRQn EXTI9_5_IRQn
+#define Pulsador_previus_Pin GPIO_PIN_5
+#define Pulsador_previus_GPIO_Port GPIOC
+#define Pulsador_previus_EXTI_IRQn EXTI9_5_IRQn
 #define SD_CS_Pin GPIO_PIN_14
 #define SD_CS_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13
