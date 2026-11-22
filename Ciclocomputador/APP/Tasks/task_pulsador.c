@@ -9,6 +9,7 @@
 #include "task_pulsador.h"
 #include "gpio.h"
 #include "fit_task.h"
+#include "gui.h"
 
 TaskHandle_t TaskHandle_Pulsador=NULL;
 
@@ -32,24 +33,10 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 }
 
 void mandarEvento(uint8_t evento){
-	/* La GUI decide si el evento se reenvia a task_fit (ver GUI.c). */
-	/*
-	if(Queue_evento_sd != NULL){
-		xQueueSend(
-				Queue_evento_sd,
-				&evento,
-				0
-			  );
-	}
-	*/
-
-	if(Queue_display_eventos != NULL){
-		xQueueSend(
-				Queue_display_eventos,
-				&evento,
-				0
-			  );
-	}
+	gui_msg_t m;
+	m.type=MSG_BUTTON;
+	m.p.ev_button=evento;
+	gui_post(&m);
 }
 
 void task_pulsador(void *arg)
@@ -78,20 +65,14 @@ void task_pulsador(void *arg)
 
 void init_task_pulsador(void)
 {
-    if (TaskHandle_Pulsador != NULL)
-        return;
 
-    if (Queue_display_eventos == NULL)
-        Queue_display_eventos = xQueueCreate(10, sizeof(uint8_t));
-
-    if (xTaskCreate(task_pulsador,
+    xTaskCreate(task_pulsador,
                     "Pulsador",
                     128,
                     NULL,
-                    tskIDLE_PRIORITY + 1,
-                    &TaskHandle_Pulsador) != pdPASS) {
-        TaskHandle_Pulsador = NULL;
-    }
+                    tskIDLE_PRIORITY + 2,
+                    &TaskHandle_Pulsador);
+
 }
 
 

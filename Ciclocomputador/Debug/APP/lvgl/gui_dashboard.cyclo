@@ -1,0 +1,2 @@
+../APP/lvgl/gui_dashboard.c:16:13:float2string	2
+../APP/lvgl/gui_dashboard.c:26:6:gui_dashboard_apply	2

@@ -1,1 +1,2 @@
-../APP/lvgl/src/draw/sw/lv_draw_sw_box_shadow.c:735:6:lv_draw_sw_box_shadow	0	static
+../APP/lvgl/src/draw/sw/lv_draw_sw_box_shadow.c:660:35:shadow_blur_corner	72	static
+../APP/lvgl/src/draw/sw/lv_draw_sw_box_shadow.c:58:6:lv_draw_sw_box_shadow	272	static

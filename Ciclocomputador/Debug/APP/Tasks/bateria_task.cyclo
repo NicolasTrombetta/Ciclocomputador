@@ -1,0 +1,3 @@
+../APP/Tasks/bateria_task.c:38:6:tarea_bateria	1
+../APP/Tasks/bateria_task.c:22:6:HAL_ADC_ConvCpltCallback	3
+../APP/Tasks/bateria_task.c:61:6:init_bateria	1

@@ -1,0 +1,12 @@
+../APP/lvgl/gui_notify.c:23:13:toast_delete_cb	8	static
+../APP/lvgl/gui_notify.c:67:13:saving_toast_timer_cb	40	static
+../APP/lvgl/gui_notify.c:127:13:error_box_deleted_cb	16	static
+../APP/lvgl/gui_notify.c:29:6:toast_show	32	static
+../APP/lvgl/gui_notify.c:83:6:spinner_show	24	static
+../APP/lvgl/gui_notify.c:111:6:spinner_hide	8	static
+../APP/lvgl/gui_notify.c:140:6:error_box_close	8	static
+../APP/lvgl/gui_notify.c:156:13:error_box_timeout_cb	0	static
+../APP/lvgl/gui_notify.c:163:13:error_box_accept_cb	0	static
+../APP/lvgl/gui_notify.c:169:6:msgbox_error	16	static
+../APP/lvgl/gui_notify.c:197:14:logger_get_last_error	0	static
+../APP/lvgl/gui_notify.c:202:9:gui_modal_active	0	static

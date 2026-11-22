@@ -1,0 +1,4 @@
+../APP/lvgl/gui_settings.c:118:19:settings_group_item	0	static
+../APP/lvgl/gui_settings.c:44:13:settings_ui_refresh	40	static
+../APP/lvgl/gui_settings.c:168:6:MaquinaConfiguracion	16	static
+../APP/lvgl/gui_settings.c:237:6:ui_init_groups	16	static

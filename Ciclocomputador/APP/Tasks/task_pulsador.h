@@ -13,14 +13,15 @@
 #include "task.h"
 #include "queue.h"
 
-// Navegación (tarea pulsadores)
-#define EV_BTN_NEXT     0
-#define EV_BTN_PREV     1
-#define EV_BTN_MENU_LONG 2
-#define EV_BTN_MENU_SHORT 3
+typedef enum{
+	EV_BTN_NEXT,
+	EV_BTN_PREV,
+	EV_BTN_MENU_LONG,
+	EV_BTN_MENU_SHORT,
+	EV_BTN_NONE
+}button_event_t;
 
 extern TaskHandle_t TaskHandle_Pulsador;
-extern QueueHandle_t Queue_display_eventos;
 
 void init_task_pulsador(void);
 

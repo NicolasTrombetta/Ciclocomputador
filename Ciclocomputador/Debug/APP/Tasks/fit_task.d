@@ -26,6 +26,9 @@ APP/Tasks/fit_task.o: ../APP/Tasks/fit_task.c ../APP/Tasks/fit_task.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
@@ -52,13 +55,16 @@ APP/Tasks/fit_task.o: ../APP/Tasks/fit_task.c ../APP/Tasks/fit_task.h \
  ../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../Middlewares/Third_Party/FatFs/src/ff.h \
  C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FATFS/Target/user_diskio.h \
+ ../APP/Tasks/task_pulsador.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/encode_fit.h \
  C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_product.h \
  C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_example.h \
  C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_crc.h \
- ../APP/Tasks/task_pulsador.h
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lvgl/gui.h \
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/Tasks/task_pulsador.h \
+ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/Tasks/fit_task.h
 ../APP/Tasks/fit_task.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_example.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit.h:
@@ -88,6 +94,9 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
@@ -114,10 +123,13 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../Middlewares/Third_Party/FatFs/src/diskio.h:
 ../Middlewares/Third_Party/FatFs/src/ff.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FATFS/Target/user_diskio.h:
+../APP/Tasks/task_pulsador.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/encode_fit.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_product.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_example.h:
 C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/FIT/fit_crc.h:
-../APP/Tasks/task_pulsador.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/lvgl/gui.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/Tasks/task_pulsador.h:
+C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputador/APP/Tasks/fit_task.h:

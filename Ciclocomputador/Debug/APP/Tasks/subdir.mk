@@ -5,15 +5,30 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../APP/Tasks/bateria_task.c \
+../APP/Tasks/bmp280_task.c \
 ../APP/Tasks/fit_task.c \
+../APP/Tasks/gps_task.c \
+../APP/Tasks/hall_task.c \
+../APP/Tasks/tarea_distribucion.c \
 ../APP/Tasks/task_pulsador.c 
 
 OBJS += \
+./APP/Tasks/bateria_task.o \
+./APP/Tasks/bmp280_task.o \
 ./APP/Tasks/fit_task.o \
+./APP/Tasks/gps_task.o \
+./APP/Tasks/hall_task.o \
+./APP/Tasks/tarea_distribucion.o \
 ./APP/Tasks/task_pulsador.o 
 
 C_DEPS += \
+./APP/Tasks/bateria_task.d \
+./APP/Tasks/bmp280_task.d \
 ./APP/Tasks/fit_task.d \
+./APP/Tasks/gps_task.d \
+./APP/Tasks/hall_task.d \
+./APP/Tasks/tarea_distribucion.d \
 ./APP/Tasks/task_pulsador.d 
 
 
@@ -24,7 +39,7 @@ APP/Tasks/%.o APP/Tasks/%.su APP/Tasks/%.cyclo: ../APP/Tasks/%.c APP/Tasks/subdi
 clean: clean-APP-2f-Tasks
 
 clean-APP-2f-Tasks:
-	-$(RM) ./APP/Tasks/fit_task.cyclo ./APP/Tasks/fit_task.d ./APP/Tasks/fit_task.o ./APP/Tasks/fit_task.su ./APP/Tasks/task_pulsador.cyclo ./APP/Tasks/task_pulsador.d ./APP/Tasks/task_pulsador.o ./APP/Tasks/task_pulsador.su
+	-$(RM) ./APP/Tasks/bateria_task.cyclo ./APP/Tasks/bateria_task.d ./APP/Tasks/bateria_task.o ./APP/Tasks/bateria_task.su ./APP/Tasks/bmp280_task.cyclo ./APP/Tasks/bmp280_task.d ./APP/Tasks/bmp280_task.o ./APP/Tasks/bmp280_task.su ./APP/Tasks/fit_task.cyclo ./APP/Tasks/fit_task.d ./APP/Tasks/fit_task.o ./APP/Tasks/fit_task.su ./APP/Tasks/gps_task.cyclo ./APP/Tasks/gps_task.d ./APP/Tasks/gps_task.o ./APP/Tasks/gps_task.su ./APP/Tasks/hall_task.cyclo ./APP/Tasks/hall_task.d ./APP/Tasks/hall_task.o ./APP/Tasks/hall_task.su ./APP/Tasks/tarea_distribucion.cyclo ./APP/Tasks/tarea_distribucion.d ./APP/Tasks/tarea_distribucion.o ./APP/Tasks/tarea_distribucion.su ./APP/Tasks/task_pulsador.cyclo ./APP/Tasks/task_pulsador.d ./APP/Tasks/task_pulsador.o ./APP/Tasks/task_pulsador.su
 
 .PHONY: clean-APP-2f-Tasks
 

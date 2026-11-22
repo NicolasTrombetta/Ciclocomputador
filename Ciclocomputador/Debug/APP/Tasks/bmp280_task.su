@@ -1,0 +1,8 @@
+../APP/Tasks/bmp280_task.c:107:6:tarea_i2c	16	static
+../APP/Tasks/bmp280_task.c:25:19:bmp_init	64	static
+../APP/Tasks/bmp280_task.c:62:9:bmp_comp_temp	0	static
+../APP/Tasks/bmp280_task.c:71:10:bmp_comp_pres	24	static
+../APP/Tasks/bmp280_task.c:116:6:tarea_barometro	24	static
+../APP/Tasks/bmp280_task.c:90:9:redondear	0	static
+../APP/Tasks/bmp280_task.c:96:6:HAL_I2C_MemRxCpltCallback	16	static,ignoring_inline_asm
+../APP/Tasks/bmp280_task.c:149:6:init_bmp280	24	static

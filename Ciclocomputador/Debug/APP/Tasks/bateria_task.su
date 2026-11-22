@@ -1,0 +1,3 @@
+../APP/Tasks/bateria_task.c:38:6:tarea_bateria	16	static
+../APP/Tasks/bateria_task.c:22:6:HAL_ADC_ConvCpltCallback	24	static,ignoring_inline_asm
+../APP/Tasks/bateria_task.c:61:6:init_bateria	16	static

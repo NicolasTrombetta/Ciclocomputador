@@ -24,7 +24,6 @@ typedef struct _objects_t {
     lv_obj_t *grid_principal;
     lv_obj_t *cont_superior;
     lv_obj_t *lbl_hora;
-    lv_obj_t *lbl_bateria;
     lv_obj_t *lbl_satelite;
     lv_obj_t *lbl_estado_sesion;
     lv_obj_t *cont_velocidad;
@@ -43,7 +42,7 @@ typedef struct _objects_t {
     lv_obj_t *obj5;
     lv_obj_t *obj6;
     lv_obj_t *cont_acaalgo;
-    lv_obj_t *lbl_acaalgo;
+    lv_obj_t *lbl_bateria;
     lv_obj_t *obj7;
     lv_obj_t *obj8;
     lv_obj_t *cont_vel_media;

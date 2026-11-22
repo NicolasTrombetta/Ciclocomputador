@@ -19,21 +19,29 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "adc.h"
+#include "dma.h"
 #include "fatfs.h"
 #include "i2c.h"
 #include "spi.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-#include "GUI.h"
 #include "queue.h"
 #include "fit_task.h"
 #include "fatfs.h"
 #include "math.h"
 #include "task_pulsador.h"
+#include "gui.h"
+#include "gps_task.h"
+#include "bmp280_task.h"
+#include "tarea_distribuicion.h"
+#include "bateria_task.h"
+#include "hall_task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -73,38 +81,40 @@ void MX_FREERTOS_Init(void);
 #define LAT0_SC   ((FIT_SINT32)(-34.6037 * DEG_TO_SC))   // punto de partida (Buenos Aires)
 #define LON0_SC   ((FIT_SINT32)(-58.3816 * DEG_TO_SC))
 
-void TaskUpdateDashboard(void* p){
-	float tiempo=0;
-	Dashboard_data_t datos;
-	DatoProcesamiento_t datos_sd;
-
-	char tiempo_str[9]="00:00:00";
-
-	while(1){
-		tiempo+=0.2;
-		datos.speed=10+tiempo*0.5;
-		datos.altitude=500+tiempo*0.01;
-		datos.avg_speed=34.2+tiempo*0.8;
-		datos.battery=100-tiempo*0.5;
-		datos.distance=40+tiempo;
-		datos.slope=20-tiempo*0.2;
-
-		//snprintf(tiempo_str, sizeof(tiempo_str), "01:20:%d",(int)tiempo);
-		datos.time = tiempo_str;
-		datos.satellites=3;
-
-		datos_sd.speed=10+tiempo*0.5;
-		datos_sd.enhanced_altitude=500+tiempo*0.01;
-		datos_sd.distance=40+tiempo;
-		datos_sd.position_lat=LAT0_SC + (FIT_SINT32)(50.0 * sin(tiempo * 0.05) * SC_PER_M);;
-		datos_sd.position_long=LON0_SC +((FIT_SINT32)(tiempo * SC_PER_M));
-
-		update_data_display(datos);
-		xQueueSend(Queue_dato_sd,&datos_sd,100);
-
-		vTaskDelay(pdMS_TO_TICKS(1000));
-	}
-}
+//void TaskUpdateDashboard(void* p){
+//	float tiempo=0;
+//	telemetry_t datos;
+//	gui_msg_t m;
+//	sd_telemetry_t datos_sd;
+//
+//	while(1){
+//		tiempo+=0.5;
+//		datos.speed=(float)(((int32_t)(50+tiempo*5))%50);
+//		datos.altitude=500+400*sin(tiempo * 0.5);
+//		datos.avg_speed=34.2+tiempo*0.8;
+//		datos.battery=100-tiempo*0.5;
+//		datos.distance=40+tiempo;
+//		datos.slope=20-tiempo*0.2;
+//		datos.time.hora = 10+(uint8_t)tiempo;
+//		datos.time.minuto = 25+((uint8_t)tiempo)%10;
+//		datos.time.segundo = 35+((uint8_t)tiempo)%10;
+//		datos.satellites=3;
+//
+//		m.type=MSG_TELEMETRY;
+//		m.p.telemetry=datos;
+//		gui_post(&m);
+//
+//		datos_sd.speed=10+tiempo*0.5;
+//		datos_sd.enhanced_altitude=500+400*sin(tiempo * 0.01);
+//		datos_sd.distance=40+tiempo;
+//		datos_sd.position_lat=LAT0_SC + (FIT_SINT32)(50.0 * sin(tiempo * 0.05) * SC_PER_M);;
+//		datos_sd.position_long=LON0_SC +((FIT_SINT32)(tiempo * SC_PER_M));
+//
+//		sd_post_data(&datos_sd);
+//
+//		vTaskDelay(pdMS_TO_TICKS(100));
+//	}
+//}
 
 
 /* USER CODE END 0 */
@@ -138,37 +148,46 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SPI2_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   MX_SPI3_Init();
   MX_USART1_UART_Init();
   MX_FATFS_Init();
+  MX_ADC1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-
-  Queue_dashboard = xQueueCreate(1, sizeof(Dashboard_data_t));
 
   init_task_fit();
   init_task_pulsador();
+  init_gps();
+  init_bateria();
+  init_bmp280();
+  init_hall();
+  init_distribucion();
 
 
-  xTaskCreate(
-		  TaskUpdateDashboard,
-  	          "Task_update_data",
-  	          configMINIMAL_STACK_SIZE,
-  	          NULL,
-  	          tskIDLE_PRIORITY + 2,
-  	          NULL
-  	      );
 
-  	  xTaskCreate(
-  	          vTaskLVGL,
+//  xTaskCreate(
+//		  TaskUpdateDashboard,
+//  	          "Task_update_data",
+//  	          configMINIMAL_STACK_SIZE,
+//  	          NULL,
+//  	          tskIDLE_PRIORITY + 2,
+//  	          NULL
+//  	      );
+  volatile BaseType_t b=10;
+
+b = xTaskCreate(
+  			  task_gui,
   	          "LVGL_Task",
   	          2048,
   	          NULL,
   	          tskIDLE_PRIORITY + 2,
   	          &lvgl_task_handle
-  	      );
+  	     );
+b++;
 
   /* USER CODE END 2 */
 

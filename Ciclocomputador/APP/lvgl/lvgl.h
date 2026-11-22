@@ -162,8 +162,10 @@ extern "C" {
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
-void Display1_INIT(void);
+void display1_init(void);
 void my_flush_cb(lv_display_t * display, const lv_area_t * area, uint8_t * px_map);
+
+extern lv_display_t *display1;
 
 /**********************
  *      MACROS

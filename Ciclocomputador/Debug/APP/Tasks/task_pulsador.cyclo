@@ -1,4 +1,4 @@
-../APP/Tasks/task_pulsador.c:15:6:HAL_GPIO_EXTI_Callback	6
-../APP/Tasks/task_pulsador.c:34:6:mandarEvento	2
-../APP/Tasks/task_pulsador.c:55:6:task_pulsador	5
-../APP/Tasks/task_pulsador.c:79:6:init_task_pulsador	4
+../APP/Tasks/task_pulsador.c:16:6:HAL_GPIO_EXTI_Callback	6
+../APP/Tasks/task_pulsador.c:35:6:mandarEvento	1
+../APP/Tasks/task_pulsador.c:42:6:task_pulsador	5
+../APP/Tasks/task_pulsador.c:66:6:init_task_pulsador	1

@@ -80,6 +80,8 @@ void Error_Handler(void);
 #define Pulsador_previus_Pin GPIO_PIN_5
 #define Pulsador_previus_GPIO_Port GPIOC
 #define Pulsador_previus_EXTI_IRQn EXTI9_5_IRQn
+#define HALL_Pin GPIO_PIN_10
+#define HALL_GPIO_Port GPIOB
 #define SD_CS_Pin GPIO_PIN_14
 #define SD_CS_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13

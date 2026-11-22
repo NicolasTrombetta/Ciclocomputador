@@ -1,0 +1,5 @@
+../APP/lvgl/gui_charts.c:21:13:chart_add_sample	4
+../APP/lvgl/gui_charts.c:47:13:chart_init.constprop	3
+../APP/lvgl/gui_charts.c:32:6:update_charts	1
+../APP/lvgl/gui_charts.c:38:6:charts_reset	5
+../APP/lvgl/gui_charts.c:71:6:charts_init	1

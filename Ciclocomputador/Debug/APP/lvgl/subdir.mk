@@ -5,17 +5,35 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../APP/lvgl/GUI.c \
+../APP/lvgl/gui.c \
+../APP/lvgl/gui_charts.c \
+../APP/lvgl/gui_dashboard.c \
+../APP/lvgl/gui_nav.c \
+../APP/lvgl/gui_notify.c \
+../APP/lvgl/gui_session.c \
+../APP/lvgl/gui_settings.c \
 ../APP/lvgl/ili9341.c \
 ../APP/lvgl/lvgl.c 
 
 OBJS += \
-./APP/lvgl/GUI.o \
+./APP/lvgl/gui.o \
+./APP/lvgl/gui_charts.o \
+./APP/lvgl/gui_dashboard.o \
+./APP/lvgl/gui_nav.o \
+./APP/lvgl/gui_notify.o \
+./APP/lvgl/gui_session.o \
+./APP/lvgl/gui_settings.o \
 ./APP/lvgl/ili9341.o \
 ./APP/lvgl/lvgl.o 
 
 C_DEPS += \
-./APP/lvgl/GUI.d \
+./APP/lvgl/gui.d \
+./APP/lvgl/gui_charts.d \
+./APP/lvgl/gui_dashboard.d \
+./APP/lvgl/gui_nav.d \
+./APP/lvgl/gui_notify.d \
+./APP/lvgl/gui_session.d \
+./APP/lvgl/gui_settings.d \
 ./APP/lvgl/ili9341.d \
 ./APP/lvgl/lvgl.d 
 
@@ -27,7 +45,7 @@ APP/lvgl/%.o APP/lvgl/%.su APP/lvgl/%.cyclo: ../APP/lvgl/%.c APP/lvgl/subdir.mk
 clean: clean-APP-2f-lvgl
 
 clean-APP-2f-lvgl:
-	-$(RM) ./APP/lvgl/GUI.cyclo ./APP/lvgl/GUI.d ./APP/lvgl/GUI.o ./APP/lvgl/GUI.su ./APP/lvgl/ili9341.cyclo ./APP/lvgl/ili9341.d ./APP/lvgl/ili9341.o ./APP/lvgl/ili9341.su ./APP/lvgl/lvgl.cyclo ./APP/lvgl/lvgl.d ./APP/lvgl/lvgl.o ./APP/lvgl/lvgl.su
+	-$(RM) ./APP/lvgl/gui.cyclo ./APP/lvgl/gui.d ./APP/lvgl/gui.o ./APP/lvgl/gui.su ./APP/lvgl/gui_charts.cyclo ./APP/lvgl/gui_charts.d ./APP/lvgl/gui_charts.o ./APP/lvgl/gui_charts.su ./APP/lvgl/gui_dashboard.cyclo ./APP/lvgl/gui_dashboard.d ./APP/lvgl/gui_dashboard.o ./APP/lvgl/gui_dashboard.su ./APP/lvgl/gui_nav.cyclo ./APP/lvgl/gui_nav.d ./APP/lvgl/gui_nav.o ./APP/lvgl/gui_nav.su ./APP/lvgl/gui_notify.cyclo ./APP/lvgl/gui_notify.d ./APP/lvgl/gui_notify.o ./APP/lvgl/gui_notify.su ./APP/lvgl/gui_session.cyclo ./APP/lvgl/gui_session.d ./APP/lvgl/gui_session.o ./APP/lvgl/gui_session.su ./APP/lvgl/gui_settings.cyclo ./APP/lvgl/gui_settings.d ./APP/lvgl/gui_settings.o ./APP/lvgl/gui_settings.su ./APP/lvgl/ili9341.cyclo ./APP/lvgl/ili9341.d ./APP/lvgl/ili9341.o ./APP/lvgl/ili9341.su ./APP/lvgl/lvgl.cyclo ./APP/lvgl/lvgl.d ./APP/lvgl/lvgl.o ./APP/lvgl/lvgl.su
 
 .PHONY: clean-APP-2f-lvgl
 

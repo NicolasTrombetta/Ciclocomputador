@@ -1,0 +1,6 @@
+../APP/Tasks/gps_task.c:20:6:HAL_UARTEx_RxEventCallback	4
+../APP/Tasks/gps_task.c:46:6:HAL_UART_ErrorCallback	2
+../APP/Tasks/gps_task.c:57:6:campo_nmea	7
+../APP/Tasks/gps_task.c:84:6:utc_a_local	16
+../APP/Tasks/gps_task.c:150:6:tarea_gps	9
+../APP/Tasks/gps_task.c:215:6:init_gps	1

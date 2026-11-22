@@ -1,0 +1,5 @@
+../APP/lvgl/gui_session.c:19:13:update_estado_sesion	16	static
+../APP/lvgl/gui_session.c:75:12:gui_session_handle	8	static
+../APP/lvgl/gui_session.c:113:6:gui_session_set_satellites	0	static
+../APP/lvgl/gui_session.c:118:12:gui_session_state	0	static
+../APP/lvgl/gui_session.c:122:12:gui_session_cmd_for_sd	8	static

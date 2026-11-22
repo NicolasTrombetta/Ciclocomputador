@@ -1,0 +1,6 @@
+../APP/Tasks/gps_task.c:20:6:HAL_UARTEx_RxEventCallback	544	static,ignoring_inline_asm
+../APP/Tasks/gps_task.c:46:6:HAL_UART_ErrorCallback	8	static
+../APP/Tasks/gps_task.c:57:6:campo_nmea	20	static
+../APP/Tasks/gps_task.c:84:6:utc_a_local	32	static
+../APP/Tasks/gps_task.c:150:6:tarea_gps	1168	static
+../APP/Tasks/gps_task.c:215:6:init_gps	16	static

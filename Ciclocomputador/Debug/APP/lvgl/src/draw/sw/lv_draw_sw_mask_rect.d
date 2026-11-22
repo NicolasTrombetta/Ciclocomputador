@@ -89,7 +89,45 @@ APP/lvgl/src/draw/sw/lv_draw_sw_mask_rect.o: \
  ../APP/lvgl/src/draw/sw/../../misc/cache/instance/lv_cache_instance.h \
  ../APP/lvgl/src/draw/sw/../../misc/cache/instance/lv_image_header_cache.h \
  ../APP/lvgl/src/draw/sw/../../misc/cache/instance/../../lv_types.h \
- ../APP/lvgl/src/draw/sw/../../misc/cache/instance/lv_image_cache.h
+ ../APP/lvgl/src/draw/sw/../../misc/cache/instance/lv_image_cache.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_math.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_log.h \
+ ../APP/lvgl/src/draw/sw/../../stdlib/lv_mem.h \
+ ../APP/lvgl/src/draw/sw/../../stdlib/lv_string.h \
+ ../APP/lvgl/src/draw/sw/lv_draw_sw.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_color.h \
+ ../APP/lvgl/src/draw/sw/../../display/lv_display.h \
+ ../APP/lvgl/src/draw/sw/../../display/../misc/lv_types.h \
+ ../APP/lvgl/src/draw/sw/../../display/../misc/lv_timer.h \
+ ../APP/lvgl/src/draw/sw/../../display/../misc/lv_event.h \
+ ../APP/lvgl/src/draw/sw/../../display/../misc/lv_color.h \
+ ../APP/lvgl/src/draw/sw/../../display/../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_vector.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_array.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_image.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_triangle.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_rect.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_label.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_bidi.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_image.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_line.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_arc.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_blur.h \
+ ../APP/lvgl/src/draw/sw/lv_draw_sw_utils.h \
+ ../APP/lvgl/src/draw/sw/../../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h \
+ ../APP/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_color.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_math.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_types.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_color.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_style.h \
+ ../APP/lvgl/src/draw/sw/lv_draw_sw_mask_private.h \
+ ../APP/lvgl/src/draw/sw/lv_draw_sw_mask.h
 ../APP/lvgl/src/draw/sw/../../misc/lv_area_private.h:
 ../APP/lvgl/src/draw/sw/../../misc/lv_area.h:
 ../APP/lvgl/src/draw/sw/../../misc/../lv_conf_internal.h:
@@ -180,3 +218,41 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../APP/lvgl/src/draw/sw/../../misc/cache/instance/lv_image_header_cache.h:
 ../APP/lvgl/src/draw/sw/../../misc/cache/instance/../../lv_types.h:
 ../APP/lvgl/src/draw/sw/../../misc/cache/instance/lv_image_cache.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_math.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_log.h:
+../APP/lvgl/src/draw/sw/../../stdlib/lv_mem.h:
+../APP/lvgl/src/draw/sw/../../stdlib/lv_string.h:
+../APP/lvgl/src/draw/sw/lv_draw_sw.h:
+../APP/lvgl/src/draw/sw/../lv_draw.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_color.h:
+../APP/lvgl/src/draw/sw/../../display/lv_display.h:
+../APP/lvgl/src/draw/sw/../../display/../misc/lv_types.h:
+../APP/lvgl/src/draw/sw/../../display/../misc/lv_timer.h:
+../APP/lvgl/src/draw/sw/../../display/../misc/lv_event.h:
+../APP/lvgl/src/draw/sw/../../display/../misc/lv_color.h:
+../APP/lvgl/src/draw/sw/../../display/../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/../lv_draw_vector.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_array.h:
+../APP/lvgl/src/draw/sw/../lv_draw_image.h:
+../APP/lvgl/src/draw/sw/../lv_draw_triangle.h:
+../APP/lvgl/src/draw/sw/../lv_draw_rect.h:
+../APP/lvgl/src/draw/sw/../lv_draw_label.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_bidi.h:
+../APP/lvgl/src/draw/sw/../lv_draw_image.h:
+../APP/lvgl/src/draw/sw/../lv_draw_line.h:
+../APP/lvgl/src/draw/sw/../lv_draw_arc.h:
+../APP/lvgl/src/draw/sw/../lv_draw_blur.h:
+../APP/lvgl/src/draw/sw/lv_draw_sw_utils.h:
+../APP/lvgl/src/draw/sw/../../lv_conf_internal.h:
+../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h:
+../APP/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_color.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_math.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_types.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_color.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/blend/../../../misc/lv_style.h:
+../APP/lvgl/src/draw/sw/lv_draw_sw_mask_private.h:
+../APP/lvgl/src/draw/sw/lv_draw_sw_mask.h:

@@ -115,7 +115,97 @@ APP/lvgl/src/draw/sw/lv_draw_sw_box_shadow.o: \
  ../APP/lvgl/src/draw/sw/blend/../lv_draw_sw_mask.h \
  ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_color.h \
  ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_area.h \
- ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_style.h
+ ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_style.h \
+ ../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend_private.h \
+ ../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h \
+ ../APP/lvgl/src/draw/sw/../../core/lv_global.h \
+ ../APP/lvgl/src/draw/sw/../../core/../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_types.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_anim.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_color_op.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_ll.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_log.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_style.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_timer.h \
+ ../APP/lvgl/src/draw/sw/../../core/../osal/lv_os_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/lv_sysmon.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../misc/lv_timer.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_observer.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_ext_data.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_types.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_style.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_color.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_assert.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_tree.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_anim.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../display/lv_display.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_pos.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_scroll.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_style.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_bidi.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_style_gen.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../core/lv_obj_style.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_draw.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_rect.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_label.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_image.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_line.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_arc.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_triangle.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_blur.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_class.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_property.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_event.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_event.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/lv_indev.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/lv_group.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/../misc/lv_types.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/../misc/lv_ll.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../misc/lv_area.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../misc/lv_timer.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../misc/lv_event.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_group.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/lv_tlsf.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../misc/lv_ll.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../misc/lv_types.h \
+ ../APP/lvgl/src/draw/sw/../../core/../tick/lv_tick.h \
+ ../APP/lvgl/src/draw/sw/../../core/../layouts/lv_layout.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_timer_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_ext_data.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_timer.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_anim_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../misc/lv_anim.h \
+ ../APP/lvgl/src/draw/sw/../../core/../tick/lv_tick_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../tick/lv_tick.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw_buf_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw_buf.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/sw/../lv_draw_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw_mask_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/lv_tlsf_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/lv_tlsf.h \
+ ../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../osal/lv_os_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/lv_sysmon_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/lv_sysmon.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/test/lv_test_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../debugging/test/../../lv_conf_internal.h \
+ ../APP/lvgl/src/draw/sw/../../core/../layouts/lv_layout_private.h \
+ ../APP/lvgl/src/draw/sw/../../core/../layouts/lv_layout.h \
+ ../APP/lvgl/src/draw/sw/../../core/lv_refr.h \
+ ../APP/lvgl/src/draw/sw/../../core/lv_obj.h \
+ ../APP/lvgl/src/draw/sw/../../core/../display/lv_display.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_assert.h \
+ ../APP/lvgl/src/draw/sw/../../stdlib/lv_string.h
 ../APP/lvgl/src/draw/sw/../../misc/lv_area_private.h:
 ../APP/lvgl/src/draw/sw/../../misc/lv_area.h:
 ../APP/lvgl/src/draw/sw/../../misc/../lv_conf_internal.h:
@@ -232,3 +322,93 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_color.h:
 ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_area.h:
 ../APP/lvgl/src/draw/sw/blend/../../../misc/lv_style.h:
+../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend_private.h:
+../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h:
+../APP/lvgl/src/draw/sw/../../core/lv_global.h:
+../APP/lvgl/src/draw/sw/../../core/../lv_conf_internal.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_types.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_anim.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_color_op.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_ll.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_log.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_style.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_timer.h:
+../APP/lvgl/src/draw/sw/../../core/../osal/lv_os_private.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/lv_sysmon.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../misc/lv_timer.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_observer.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_ext_data.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../lv_conf_internal.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_types.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_style.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_color.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_assert.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_tree.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_anim.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../display/lv_display.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_pos.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_scroll.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_style.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_bidi.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_style_gen.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../core/lv_obj_style.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_draw.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_rect.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_label.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_image.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_line.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_arc.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_triangle.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../draw/lv_draw_blur.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_class.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_property.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_obj_event.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../misc/lv_event.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/lv_indev.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/lv_group.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/../lv_conf_internal.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/../misc/lv_types.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../core/../misc/lv_ll.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../misc/lv_area.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../misc/lv_timer.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/../indev/../misc/lv_event.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/../../core/lv_group.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/lv_tlsf.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../lv_conf_internal.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../misc/lv_ll.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../misc/lv_types.h:
+../APP/lvgl/src/draw/sw/../../core/../tick/lv_tick.h:
+../APP/lvgl/src/draw/sw/../../core/../layouts/lv_layout.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_timer_private.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_ext_data.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_timer.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_anim_private.h:
+../APP/lvgl/src/draw/sw/../../core/../misc/lv_anim.h:
+../APP/lvgl/src/draw/sw/../../core/../tick/lv_tick_private.h:
+../APP/lvgl/src/draw/sw/../../core/../tick/lv_tick.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw_buf_private.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw_buf.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/lv_draw_private.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw_private.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/sw/../lv_draw_private.h:
+../APP/lvgl/src/draw/sw/../../core/../draw/sw/lv_draw_sw_mask_private.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/lv_tlsf_private.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/lv_tlsf.h:
+../APP/lvgl/src/draw/sw/../../core/../stdlib/builtin/../../osal/lv_os_private.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/lv_sysmon_private.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/sysmon/lv_sysmon.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/test/lv_test_private.h:
+../APP/lvgl/src/draw/sw/../../core/../debugging/test/../../lv_conf_internal.h:
+../APP/lvgl/src/draw/sw/../../core/../layouts/lv_layout_private.h:
+../APP/lvgl/src/draw/sw/../../core/../layouts/lv_layout.h:
+../APP/lvgl/src/draw/sw/../../core/lv_refr.h:
+../APP/lvgl/src/draw/sw/../../core/lv_obj.h:
+../APP/lvgl/src/draw/sw/../../core/../display/lv_display.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_assert.h:
+../APP/lvgl/src/draw/sw/../../stdlib/lv_string.h:

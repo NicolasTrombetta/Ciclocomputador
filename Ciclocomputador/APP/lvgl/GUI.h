@@ -4,50 +4,46 @@
 #include <stdint.h>
 #include "FreeRTOS.h"
 #include "queue.h"
-#include "fit_task.h"   /* Evento_sd_t (maquina_sd) */
+#include "task_pulsador.h"
+#include "fit_task.h"
+
+typedef struct{
+	uint8_t hora;
+	uint8_t minuto;
+	uint8_t segundo;
+}time_t;
 
 typedef struct{
 		float speed;
-		float altitude;
+		int32_t altitude;
 		float avg_speed;
 		uint8_t battery;
 		float distance;
 		float slope;
-		const char* time;
+		time_t time;
 		uint8_t satellites;
-}Dashboard_data_t;
+}telemetry_t;
 
 typedef enum {
-	CONFIG_UNSELECT,
-    CONFIG_SELECT,
-    CONFIG_EDIT
-} ConfigState_t;
+    MSG_BUTTON,
+    MSG_TELEMETRY,
+    MSG_REC_EVENT,
+    MSG_TICK,
+} gui_msg_type_t;
 
-typedef enum {
-    CFG_CIRCUNF,
-    CFG_BRILLO,
-    CFG_UNIDADES,
-    CFG_ALTITUD,
-}Config_index_t;
-
-
-void dashboard_create(void);
-void update_data_display(Dashboard_data_t datos);
-extern QueueHandle_t Queue_dashboard;
-
-/* Cola de eventos de navegacion del display.
- * task_pulsador.c debe enviar los eventos de botones aca (no a Queue_evento_sd,
- * que la consume task_fit). */
-extern QueueHandle_t Queue_display_eventos;
-
-/* Prototipos internos de GUI.c.
- * Se declaran static porque las funciones se definen static en GUI.c y algunas
- * se usan antes de su definicion. No deben usarse desde otros modulos.
- * TODO: mover estos prototipos dentro de GUI.c para poder borrarlos del header. */
+typedef struct {
+    gui_msg_type_t type;
+    union {
+        button_event_t  ev_button;
+        telemetry_t telemetry;
+        sd_event_t  ev_sd;
+    } p;
+} gui_msg_t;
 
 
+void gui_init(void);
+uint8_t gui_post(const gui_msg_t *m);
 
-//task freeRTOS
-void vTaskLVGL(void *pvParameters);
+void task_gui(void *pvParameters);
 
 #endif /* DASHBOARD_H */

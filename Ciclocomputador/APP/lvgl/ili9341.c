@@ -24,6 +24,7 @@
 #include "spi.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
+#include "lvgl.h"
 
 /** @addtogroup BSP
   * @{
@@ -489,8 +490,7 @@ void ili9341_DrawRGBImage(uint16_t Xpos, uint16_t Ypos, uint16_t Xsize, uint16_t
 
     LCD_IO_DC_Data();
     LCD_IO_CS_Select();
-    LCD_IO_Transmit(pdata, Xsize * Ysize * 2);
-    LCD_IO_CS_Deselect();
+    HAL_SPI_Transmit_DMA(&hspi2,pdata, Xsize * Ysize * 2);
 }
 
 
@@ -569,20 +569,16 @@ void LCD_IO_DC_Data(void){
 TaskHandle_t lvgl_task_handle = NULL;
 
 void LCD_IO_Transmit(uint8_t* buffer,uint16_t len){
-	HAL_SPI_Transmit_IT(&hspi2, buffer, len);
-	xSemaphoreTake(Semaphore_SPI, portMAX_DELAY);
+//	HAL_SPI_Transmit_DMA(&hspi2, buffer, len);
+//	xSemaphoreTake(Semaphore_SPI, portMAX_DELAY);
+	HAL_SPI_Transmit(&hspi2, buffer, len,1);
 }
 
 void LCD_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi){
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR(Semaphore_SPI, &xHigherPriorityTaskWoken);
 
-	if (lvgl_task_handle != NULL)
-	    {
-
-			vTaskNotifyGiveFromISR(lvgl_task_handle, &xHigherPriorityTaskWoken);
-	    }
-
+	lv_display_flush_ready(display1);
+	LCD_IO_CS_Deselect();
 	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 

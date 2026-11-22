@@ -123,7 +123,12 @@ APP/lvgl/src/draw/sw/lv_draw_sw_arc.o: \
  ../APP/lvgl/src/draw/sw/../lv_draw_blur.h \
  ../APP/lvgl/src/draw/sw/lv_draw_sw_utils.h \
  ../APP/lvgl/src/draw/sw/../../lv_conf_internal.h \
- ../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h
+ ../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h \
+ ../APP/lvgl/src/draw/sw/../../misc/lv_log.h \
+ ../APP/lvgl/src/draw/sw/../../stdlib/lv_mem.h \
+ ../APP/lvgl/src/draw/sw/../../stdlib/lv_string.h \
+ ../APP/lvgl/src/draw/sw/../lv_draw_private.h \
+ ../APP/lvgl/src/draw/sw/../../osal/lv_os_private.h
 ../APP/lvgl/src/draw/sw/../../misc/lv_area_private.h:
 ../APP/lvgl/src/draw/sw/../../misc/lv_area.h:
 ../APP/lvgl/src/draw/sw/../../misc/../lv_conf_internal.h:
@@ -248,3 +253,8 @@ C:/Users/Nico\ trombetta/Documents/UTN/DIgitales2/Ciclocomputador/Ciclocomputado
 ../APP/lvgl/src/draw/sw/lv_draw_sw_utils.h:
 ../APP/lvgl/src/draw/sw/../../lv_conf_internal.h:
 ../APP/lvgl/src/draw/sw/blend/lv_draw_sw_blend.h:
+../APP/lvgl/src/draw/sw/../../misc/lv_log.h:
+../APP/lvgl/src/draw/sw/../../stdlib/lv_mem.h:
+../APP/lvgl/src/draw/sw/../../stdlib/lv_string.h:
+../APP/lvgl/src/draw/sw/../lv_draw_private.h:
+../APP/lvgl/src/draw/sw/../../osal/lv_os_private.h:

@@ -50,6 +50,14 @@ static void lv_mem_walker(void * ptr, size_t size, int used, void * user);
 /**********************
  *  STATIC VARIABLES
  **********************/
+volatile size_t   g_lv_fail_size;
+volatile size_t   g_lv_fail_cur_used;
+volatile size_t   g_lv_fail_max_used;
+volatile size_t   g_lv_fail_free_size;
+volatile size_t   g_lv_fail_biggest_size;
+volatile uint32_t g_lv_fail_frag_pct;
+volatile uint32_t g_lv_fail_kind;
+volatile uint32_t g_lv_fail_count;
 
 /**********************
  *      MACROS
@@ -63,6 +71,12 @@ static void lv_mem_walker(void * ptr, size_t size, int used, void * user);
 #define _COPY(d, s) *d = *s; d++; s++;
 #define _SET(d, v) *d = v; d++;
 #define _REPEAT8(expr) expr expr expr expr expr expr expr expr
+
+#if defined(__GNUC__) && defined(__arm__)
+    #define LV_DBG_BREAK() __asm volatile("bkpt 0" ::: "memory")
+#else
+    #define LV_DBG_BREAK() do { volatile int stop = 1; while(stop) {} } while(0)
+#endif
 
 /**********************
  *   GLOBAL FUNCTIONS
@@ -136,12 +150,33 @@ void lv_mem_remove_pool(lv_mem_pool_t pool)
     LV_LOG_WARN("invalid pool: %p", pool);
 }
 
+static void lv_debug_alloc_failed(size_t size, uint32_t kind)
+{
+    lv_mem_monitor_t mon;
+
+    lv_mem_monitor(&mon);
+
+    g_lv_fail_size = size;
+    g_lv_fail_cur_used = state.cur_used;
+    g_lv_fail_max_used = state.max_used;
+    g_lv_fail_free_size = mon.free_size;
+    g_lv_fail_biggest_size = mon.free_biggest_size;
+    g_lv_fail_frag_pct = mon.frag_pct;
+    g_lv_fail_kind = kind;
+    g_lv_fail_count++;
+    LV_DBG_BREAK();
+}
+
 void * lv_malloc_core(size_t size)
 {
 #if LV_USE_OS
     lv_mutex_lock(&state.mutex);
 #endif
     void * p = lv_tlsf_malloc(state.tlsf, size);
+
+    if(p == NULL) {
+        lv_debug_alloc_failed(size, 1);
+    }
 
     if(p) {
         state.cur_used += lv_tlsf_block_size(p);
@@ -162,6 +197,10 @@ void * lv_realloc_core(void * p, size_t new_size)
 
     size_t old_size = lv_tlsf_block_size(p);
     void * p_new = lv_tlsf_realloc(state.tlsf, p, new_size);
+
+    if(p_new == NULL) {
+        lv_debug_alloc_failed(new_size, 2);
+    }
 
     if(p_new) {
         state.cur_used -= old_size;

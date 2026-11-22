@@ -10,8 +10,11 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+#define BUF_SIZE (240*32)
 
-static uint8_t buf1[15360];
+static uint8_t buf1[BUF_SIZE];
+static uint8_t buf2[BUF_SIZE];
+
 lv_display_t * display1;
 
 void my_flush_cb(lv_display_t * display, const lv_area_t * area, uint8_t * px_map)
@@ -20,16 +23,12 @@ void my_flush_cb(lv_display_t * display, const lv_area_t * area, uint8_t * px_ma
 	uint16_t heigth=area->y2-area->y1 + 1;
 
     ili9341_DrawRGBImage(area->x1, area->y1, width,heigth, px_map);
-
-    ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-
-    lv_display_flush_ready(display);
 }
 
-void Display1_INIT(void){
+void display1_init(void){
 	ili9341_Init();
 	display1 = lv_display_create(240, 320);
-	lv_display_set_buffers(display1, buf1, NULL, sizeof(buf1), LV_DISPLAY_RENDER_MODE_PARTIAL);
+	lv_display_set_buffers(display1, buf1, buf2, sizeof(buf1), LV_DISPLAY_RENDER_MODE_PARTIAL);
 	lv_display_set_flush_cb(display1, my_flush_cb);
 	lv_display_set_color_format(display1, LV_COLOR_FORMAT_RGB565_SWAPPED);
 	lv_tick_set_cb(xTaskGetTickCount);

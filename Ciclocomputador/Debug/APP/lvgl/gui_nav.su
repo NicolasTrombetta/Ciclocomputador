@@ -1,0 +1,3 @@
+../APP/lvgl/gui_nav.c:16:6:gui_nav_handle	8	static
+../APP/lvgl/gui_nav.c:46:9:gui_nav_get_screen	0	static
+../APP/lvgl/gui_nav.c:50:7:gui_nav_set_screen	0	static
